@@ -10,7 +10,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-Assets
+
 
 # Ignore other generated Unity files
 *.meta
