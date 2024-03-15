@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public GameManager gameManager;
+    public TerrainController terrainController;
+
     bool onGround = true;
     float? prevY;
     float inAirTime = 0;
+
+    public float speed = 3;
+
     void Start() {
     }
 
@@ -17,7 +23,7 @@ public class PlayerController : MonoBehaviour {
         if (!gameManager.gameStarted) {
             return;
         }
-        Vector3 forwardMovement = transform.forward * 2 * Time.deltaTime;
+        Vector3 forwardMovement = transform.forward * speed * Time.deltaTime;
 
         Vector3 newPosition = transform.position + forwardMovement;
 
@@ -49,6 +55,12 @@ public class PlayerController : MonoBehaviour {
             prevY = curY;
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "block") {
+            terrainController.CheckBlockAndHandleSpawnAndDestroy(collision.gameObject.name);
+        }
     }
 
     private void OnTriggerEnter(Collider other) {

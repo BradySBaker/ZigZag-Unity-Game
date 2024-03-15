@@ -10,9 +10,22 @@ public class FruitController : MonoBehaviour {
     Vector3 startPoint;
     Vector3 endPoint;
     float elapsedTime = 0;
+
+    public Mesh[] meshes;
+
     void Start () {
         startPoint = transform.position;
-        endPoint = startPoint + transform.up;
+        endPoint = startPoint + transform.up/2;
+
+        MeshFilter meshFilter = GetComponent<MeshFilter>();
+
+        if (meshFilter == null | meshes.Length == 0) {
+            Debug.LogError("Please add a meshFilter and a list of meshes to the script");
+            return;
+        }
+
+        int randomIndex = Random.Range(0, meshes.Length);
+        meshFilter.mesh = meshes[randomIndex];
     }
 
     void FixedUpdate()
