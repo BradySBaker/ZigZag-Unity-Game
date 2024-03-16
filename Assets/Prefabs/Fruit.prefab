@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0147643
+      value: 1.052
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.012
+      value: 0.591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.504357
+      value: 1.071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74,15 +74,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       propertyPath: m_TagString
-      value: Fruit
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7006543837418787955}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5095091285305290687}
@@ -92,27 +89,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0104039ac122caf4dba5f314d06e7fef, type: 3}
   m_PrefabInstance: {fileID: 486827894477611049}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &7006543837418787955
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720829609219448184}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.16019133, y: 0.32141766, z: 0.15639283}
-  m_Center: {x: 0, y: 0.16071172, z: 0}
 --- !u!114 &5095091285305290687
 MonoBehaviour:
   m_ObjectHideFlags: 0

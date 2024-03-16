@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 3;
 
+    public float speedChange = .03f;
+
     void Start() {
     }
 
@@ -23,6 +25,13 @@ public class PlayerController : MonoBehaviour {
         if (!gameManager.gameStarted) {
             return;
         }
+        if (speedChange > .005) {
+            speedChange *= Mathf.Pow(.99f, Time.deltaTime);
+        }
+        if (speed < 7) {
+            speed += speedChange * Time.deltaTime;
+        }
+        Debug.Log(speed);
         Vector3 forwardMovement = transform.forward * speed * Time.deltaTime;
 
         Vector3 newPosition = transform.position + forwardMovement;

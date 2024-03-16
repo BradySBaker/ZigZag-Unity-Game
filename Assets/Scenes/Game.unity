@@ -350,13 +350,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.4469746, y: -0.22944121, z: 0.11976646, w: 0.8562864}
   m_LocalPosition: {x: -1.72, y: 5.98, z: 2.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 55.128, y: -30, z: 0}
 --- !u!1 &834406419
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 5783093059050283591, guid: 7511674e32b4d5d43a9240dccc2b58d1, type: 3}
-  fruit: {fileID: 720829609219448184, guid: 452e37f3857a17f41975e7faef0f0503, type: 3}
+  fruit: {fileID: 8719570208128813912, guid: fa72ac63a905f264db2aeaa9ec56f42b, type: 3}
   fruitChance: 0.1
 --- !u!1 &963194225
 GameObject:
@@ -483,7 +483,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 834406420}
   terrainController: {fileID: 834406422}
-  speed: 3
+  speed: 8
 --- !u!54 &1591713272
 Rigidbody:
   m_ObjectHideFlags: 0

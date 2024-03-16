@@ -8,8 +8,8 @@ public class TerrainController : MonoBehaviour
     public GameObject fruit;
 
     private Vector3 prevBlockPos;
-    int chunkCount = 6; //Should be even number
-    int blockPerChunk = 3;
+    int chunkCount = 12; //Should be even number
+    int blockPerChunk = 1; //The higher the easier
     int generateDistance;
     int blockCount = 0;
     public float fruitChance = .1f;

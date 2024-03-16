@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("highScore", points);
         }
         PlayerPrefs.SetInt("prevScore", points);
+
+        Debug.Log(PlayerPrefs.GetInt("highScore"));
+
+
         SceneManager.LoadScene(0);
     }
 
