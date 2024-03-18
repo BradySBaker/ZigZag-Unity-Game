@@ -9,7 +9,10 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
     public GameManager gameManager;
     public TerrainController terrainController;
+    public GameObject particleEffect;
+    public AudioSource pickup;
 
+    public Animator anim;
     bool onGround = true;
     float? prevY;
     float inAirTime = 0;
@@ -19,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     public float speedChange = .03f;
 
     void Start() {
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         if (!onGround) {
+            anim.SetTrigger("IsFalling");
             inAirTime += Time.deltaTime;
             return;
         }
@@ -74,8 +79,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Fruit") {
+            pickup.Play();
+            GameObject g = Instantiate(particleEffect, transform.position + transform.up/3, Quaternion.identity);
             Destroy(other.gameObject);
             gameManager.AddPoint();
+            Destroy(g, 2);
         }
     }
 }
